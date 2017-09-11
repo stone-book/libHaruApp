@@ -10,6 +10,7 @@ namespace libHaruApp
     {
         static void Main(string[] args)
         {
+            TextDemo.demo();
         }
     }
 }
