@@ -337,7 +337,7 @@ public class HPdfDoc: IDisposable {
 
 
     [DllImport("libhpdf.dll")]
-    private extern static string HPDF_GetVersion();
+    private extern static IntPtr HPDF_GetVersion();
 
     [DllImport("libhpdf.dll")]
     private extern static IntPtr HPDF_New(HPDF_ErrorHandler user_error_fn,
@@ -551,7 +551,7 @@ public class HPdfDoc: IDisposable {
     }
 
     public static string HPdfGetVersion() {
-        return HPDF_GetVersion();
+        return Marshal.PtrToStringAnsi(HPDF_GetVersion());
     }
 
     public static void ErrorProc(uint error_no, uint detail_no,

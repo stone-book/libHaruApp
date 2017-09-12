@@ -57,15 +57,13 @@ public class TextDemo {
         const string page_title = "Text Demo";
         const string samp_text = "abcdefgABCDEFG123!#$%&+-@?";
         const string samp_text2 = "The quick brown fox jumps over the lazy dog.";
-        
-        //error
-        //Console.WriteLine("libhpdf-" + HPdfDoc.HPdfGetVersion());
+                
+        Console.WriteLine("libhpdf-" + HPdfDoc.HPdfGetVersion());
 
         try {
             HPdfDoc pdf = new HPdfDoc();
 
-            // error
-            //pdf.SetCompressionMode(HPdfDoc.HPDF_COMP_ALL);
+            pdf.SetCompressionMode(HPdfDoc.HPDF_COMP_ALL);
 
             /* create default-font */
             HPdfFont font = pdf.GetFont("Helvetica", null);
